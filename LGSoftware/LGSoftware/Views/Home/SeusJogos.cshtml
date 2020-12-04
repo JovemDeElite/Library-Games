@@ -1,0 +1,66 @@
+﻿
+@{
+    ViewBag.Title = "SeusJogos";
+}
+
+<style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th, td {
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+</style>
+<html>
+<body>
+    <div style="height:1000px; opacity:0.3;" id="equalizar"></div>
+    <img src="~/img/close-up-electronics-equipment-790479.jpg" style=" height:1000px;width:100%; z-index:1">
+    <center>
+        <div style="position:absolute;width:1000px; top:250px;z-index:2;left:570px;background-color: white;" class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="500">
+            @if (ViewBag.LoginAtual != null)
+            {
+                <table style="margin-top: 15px;margin-bottom: 15px;">
+                    <tr>
+                        <th>Nome</th>
+                        <th>Codigo de Download</th>
+                        <th></th>
+                    </tr>
+
+
+                    @foreach (var item in ViewBag.LoginAtual.produtosComprado)
+                    {
+                <tr>
+                    <td>@item.Nome</td>
+                    <td>XXXXXXXXX</td>
+                    @if (item.Nome == "Overwatch")
+                    {
+                        <td><a href="/Produto/Overwatch">Ver Pagina do Jogo</a></td>
+                    }
+                    else if (item.Nome == "Arma III")
+                    {
+                        <td><a href="/Produto/Arma">Ver Pagina do Jogo</a></td>
+                    }
+                    else if (item.Nome == "Fable")
+                    {
+                        <td><a href="/Produto/Fable">Ver Pagina do Jogo</a></td>
+                    }
+                    else if (item.Nome == "Minecraft")
+                    {
+                        <td><a href="/Produto/Minecraft">Ver Pagina do Jogo</a></td>
+                    }
+                </tr>
+                    }
+                </table>
+            }
+        </div>
+    </center>
+</body>
+</html>
+

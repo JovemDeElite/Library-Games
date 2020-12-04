@@ -1,0 +1,8 @@
+- O Sistema está feito com banco não real, então quando o sistema for fechado os dados serão perdidos.
+- Por padrão o sistema está cadastrando um usuario para que pode ser utilizado para teste, ou pode-se criar um novo user em registrar.
+-Registro padrão-
+email: mila@teste.com
+usuario: JovemDeElite
+senha: 111
+
+- pode-se ser criados quantos usuario quando quiser e cada registro mantem sua lista de compras e os que já foram comprados.

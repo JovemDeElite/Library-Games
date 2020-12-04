@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewBag.Title = "Register";
+}
+<html>
+<body>
+    <div style="height:1000px; opacity:0.3;" id="equalizar"></div>
+    <img src="~/img/close-up-electronics-equipment-790479.jpg" style=" height:1000px;width:100%; z-index:1">
+    <center>
+        <div style="position:absolute;width:1400px; top:200px;z-index:2;left:500px;" class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="500">
+            <form action="" method="post" class="form-box">
+                <h3 class="h4 text-black mb-4">Cadastro</h3>
+                <div class="form-group">
+                    <input type="text" name="nome" class="form-control" placeholder="Nome">
+                </div>
+                @*<div class="form-group">
+                        <input type="text" class="form-control" placeholder="CPF">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Endereço">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Telefone">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Celular">
+                        </div>*@
+                <div class="form-group">
+                    <input type="text" name="email" class="form-control" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="usuario" class="form-control" placeholder="Usuário">
+                </div>
+
+                <div class="form-group">
+                    <input type="password" name="senha" class="form-control" placeholder="Senha">
+                </div>
+                @*<div class="form-group mb-4">
+                        <input type="password" class="form-control" placeholder="Re-type Password">
+                    </div>*@
+                <div class="form-group">
+                    <input type="submit" id="btn_logar" class="btn btn-primary btn-pill" value="Finalizar">
+                </div>
+            </form>
+        </div>
+    </center>
+</body>
+</html>

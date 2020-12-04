@@ -1,0 +1,61 @@
+﻿
+@{
+    ViewBag.Title = "Carrinho";
+}
+
+<style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th, td {
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+</style>
+<html>
+<body>
+    <div style="height:1000px; opacity:0.3;" id="equalizar"></div>
+    <img src="~/img/close-up-electronics-equipment-790479.jpg" style=" height:1000px;width:100%; z-index:1">
+    <center>
+        <div style="position:absolute;width:1000px; top:250px;z-index:2;left:570px;background-color: white;" class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="500">
+            @if (ViewBag.LoginAtual != null)
+            {
+                <table>
+                    <tr>
+                        <th style="width: 35%;">Jogo</th>
+                        <th style="width: 35%;">Valor</th>
+                        <th></th>
+                    </tr>
+
+
+                    @foreach (var item in ViewBag.CarrinhoAtual.produtos)
+                    {
+                        <tr>
+                            <td>@item.Nome</td>
+                            <td>@item.Preco</td>
+                            <td><form><input type="hidden" name="prodId" value="@item.Id"><input type="hidden" name="Acao" value="1"><button class="btn btn-light" type="submit">Retirar da Lista</button></form></td>
+                        </tr>
+                    }
+                </table>
+
+            }
+            <hr>
+            <div style='font-family: "Poppins", sans-serif;'>
+                Preço Total: @ViewBag.CarrinhoAtual.Preco_total
+            </div>
+            <br>
+            <a href="/Home/Index" style="margin-top: 20px;" class="btn btn-secondary">continuar comprando</a>
+            <form>
+                <input type="hidden" name="Acao" value="2">
+                <button type="submit" style="margin-top: 10px;margin-bottom: 40px;" class="btn btn-success">Fechar Compra</button>
+            </form>
+        </div>
+    </center>
+</body>
+</html>
