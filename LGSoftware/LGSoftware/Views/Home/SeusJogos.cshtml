@@ -36,26 +36,26 @@
 
                     @foreach (var item in ViewBag.LoginAtual.produtosComprado)
                     {
-                <tr>
-                    <td>@item.Nome</td>
-                    <td>XXXXXXXXX</td>
-                    @if (item.Nome == "Overwatch")
-                    {
-                        <td><a href="/Produto/Overwatch">Ver Pagina do Jogo</a></td>
-                    }
-                    else if (item.Nome == "Arma III")
-                    {
-                        <td><a href="/Produto/Arma">Ver Pagina do Jogo</a></td>
-                    }
-                    else if (item.Nome == "Fable")
-                    {
-                        <td><a href="/Produto/Fable">Ver Pagina do Jogo</a></td>
-                    }
-                    else if (item.Nome == "Minecraft")
-                    {
-                        <td><a href="/Produto/Minecraft">Ver Pagina do Jogo</a></td>
-                    }
-                </tr>
+                        <tr>
+                            <td>@item.Nome</td>
+                            <td>XXXXXXXXX</td>
+                            @if (item.Nome == "Overwatch")
+                            {
+                                <td><a href="/Produto/Overwatch">Ver Pagina do Jogo</a></td>
+                            }
+                            else if (item.Nome == "Arma III")
+                            {
+                                <td><a href="/Produto/Arma">Ver Pagina do Jogo</a></td>
+                            }
+                            else if (item.Nome == "Fable")
+                            {
+                                <td><a href="/Produto/Fable">Ver Pagina do Jogo</a></td>
+                            }
+                            else if (item.Nome == "Minecraft")
+                            {
+                                <td><a href="/Produto/Minecraft">Ver Pagina do Jogo</a></td>
+                            }
+                        </tr>
                     }
                 </table>
             }
@@ -64,3 +64,4 @@
 </body>
 </html>
 
+<script src="~/js/main.js"></script>
